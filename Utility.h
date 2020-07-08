@@ -3,6 +3,7 @@
 #include <vector>
 #include <memory>
 #include "Item.h"
+#include "assert.h"
 
 
 std::vector<std::unique_ptr<Item>> makeHelpfulItems(int num);

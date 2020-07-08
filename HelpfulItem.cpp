@@ -4,3 +4,8 @@ void HelpfulItem::use(Character *character)
 {
     
 }
+
+HelpfulItem::~HelpfulItem()
+{
+    
+}

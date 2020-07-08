@@ -28,7 +28,7 @@ it's very easy to mess this task up.
     
  5) implement the constructors for all the Character-derived types. 
         Dragon's attackDamage is 80
-        DragonSlayer's attackDamage is 4
+        DragonSlayer's attackDamage is 4   DONE
         Dwarf's attackDamage is 4
         Paladin's attackDamage is 10
 
