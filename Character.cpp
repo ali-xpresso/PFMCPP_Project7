@@ -94,8 +94,10 @@ void Character::restoreAndBuff(int& stat, int& originalStat)
     { 
         stat = originalStat;
     }
-    originalStat = stat;
     stat *= 1.1;
+    originalStat = stat;
+    
+    
     
 }
 
