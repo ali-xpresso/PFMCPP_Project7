@@ -97,8 +97,6 @@ void Character::restoreAndBuff(int& stat, int& originalStat)
     stat *= 1.1;
     originalStat = stat;
     
-    
-    
 }
 
 void Character::attackInternal(Character& other)

@@ -47,16 +47,16 @@ void useDefensiveItem(Character* character, Item& item)
     //dwarves, paladins, and DragonSlayers get extra boosts from defensive item.
     if( auto* ch = dynamic_cast<Dwarf*>(character) )
     {
-        ch->boostArmor( item.getBoost() * 1.1 );
+        ch->boostArmor( static_cast<int>(item.getBoost() * 1.1 ));
     }
     else if( auto* ch = dynamic_cast<Paladin*>(character) )
     {
         //same with paladins
-        ch->boostArmor( item.getBoost() * 1.3 );
+        ch->boostArmor( static_cast<int>(item.getBoost() * 1.3));
     }
     else if( auto* ch = dynamic_cast<DragonSlayer*>(character))
     {
-        ch->boostArmor( item.getBoost() * 1.5 );
+        ch->boostArmor( static_cast<int>(item.getBoost() * 1.5 ));
     }
     else if( auto* ch = dynamic_cast<Dragon*>(character) )
     {
@@ -71,11 +71,11 @@ void useHelpfulItem(Character* character, Item* item)
     }
     else if( auto* ch = dynamic_cast<Paladin*>(character) )
     {
-        ch->boostHitPoints(item->getBoost() * 1.5);
+        ch->boostHitPoints(static_cast<int>(item->getBoost() * 1.5));
     }
     else if( auto* ch = dynamic_cast<DragonSlayer*>(character))
     {
-        ch->boostHitPoints(item->getBoost() * 1.25);
+        ch->boostHitPoints(static_cast<int>(item->getBoost() * 1.25));
     }
     else if( auto* ch = dynamic_cast<Dragon*>(character) )
     {
@@ -86,11 +86,11 @@ void useAttackItem(Character* character, Item* item)
 {
     if( auto* ch = dynamic_cast<Dwarf*>(character) )
     {
-        ch->boostAttackDamage(item->getBoost() * 1.5);
+        ch->boostAttackDamage(static_cast<int>(item->getBoost() * 1.5));
     }
     else if( auto* ch = dynamic_cast<Paladin*>(character) )
     {
-        ch->boostAttackDamage(item->getBoost() * 1.33);
+        ch->boostAttackDamage(static_cast<int>(item->getBoost() * 1.33));
     }
     else if( auto* ch = dynamic_cast<DragonSlayer*>(character))
     {
