@@ -28,8 +28,15 @@ void DragonSlayer::attack(Character& other)
         //note that items are single-use only, so you need to reset it after use.  
         //look in the Character class for how the other item types are reset after use.
 
-        attackItem->use(this);
-        attackItem.reset();
+        if (attackItem == nullptr)
+        {
+            std::cout << "The Dragon Slayer's attack item has already been used. No 10x damage multiplier. " << std::endl;
+        }
+        else
+        {
+            attackItem->use(this);
+            attackItem.reset();
+        }
 
         while( dragon->getHP() > 0 )
         {

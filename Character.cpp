@@ -88,7 +88,7 @@ int Character::takeDamage(int damage)
     return hitPoints;
 }
 
-void Character::restoreAndBuff(int& stat, int& originalStat)
+void restoreAndBuff(int& stat, int& originalStat)
 {
     if (stat < originalStat)
     { 
@@ -110,9 +110,9 @@ void Character::attackInternal(Character& other)
             c) the initial value of your stats is updated to reflect this boosted stat for the next time you defeat another character.
       */
 
-        restoreAndBuff(this->armor, *initialArmorLevel);
-        restoreAndBuff(this->hitPoints, *initialHitPoints);
-        restoreAndBuff(this->attackDamage, *initialAttackDamage);
+        restoreAndBuff(armor, *initialArmorLevel);
+        restoreAndBuff(hitPoints, *initialHitPoints);
+        restoreAndBuff(attackDamage, *initialAttackDamage);
 
         //assert(false);
         std::cout << getName() << " defeated " << other.getName() << " and leveled up!" << std::endl;        
@@ -126,7 +126,7 @@ void Character::printStats()
     /*
     make your getStats() use a function from the Utility.h
     */
-    std::cout << getCharacterStats(this);; 
+    std::cout << getStats(); 
     
     std::cout << std::endl;
     std::cout << std::endl;
