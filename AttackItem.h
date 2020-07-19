@@ -8,5 +8,4 @@ struct AttackItem : Item
 {
     AttackItem() : Item("attackItem", 10) { }
     void use(Character* character) override;
-    bool hasBeenUsed;
 };
