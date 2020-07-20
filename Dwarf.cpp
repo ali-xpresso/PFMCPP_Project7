@@ -1,4 +1,5 @@
 #include "Dwarf.h"
+#include "Utility.h"
 
 Dwarf::Dwarf(std::string name_, int hitPoints, int armor ) : Character(hitPoints, armor, 4), name(name_)
 {
@@ -15,3 +16,10 @@ std::string Dwarf::getStats()
 {
     return getCharacterStats(this);
 }
+
+void Dwarf::attack(Character& other)
+{
+    Character::attack(other);
+}
+
+

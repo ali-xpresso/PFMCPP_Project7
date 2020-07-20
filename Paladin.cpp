@@ -1,4 +1,5 @@
 #include "Paladin.h"
+#include "Utility.h"
 
 Paladin::Paladin(std::string name_, int hitPoints, int armor ) : Character(hitPoints, armor, 10), name(name_)
 {
@@ -15,3 +16,10 @@ std::string Paladin::getStats()
 {
     return getCharacterStats(this);
 }
+
+void Paladin::attack(Character& other)
+{
+    Character::attack(other);
+}
+
+
