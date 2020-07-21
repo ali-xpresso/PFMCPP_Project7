@@ -16,10 +16,3 @@ std::string Paladin::getStats()
 {
     return getCharacterStats(this);
 }
-
-void Paladin::attack(Character& other)
-{
-    Character::attack(other);
-}
-
-
